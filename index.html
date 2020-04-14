@@ -3,20 +3,45 @@
 <head>
   <title>this is the 2019 covid19 Results Checker</title>
   <meta charset="UTF-8">
+  <meta lang="en">
   <meta name="description" content="Covid19 results check. Check by the region of your residence">
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="region, Covid19Population">
   <meta name="author" content="Dennis Moha">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="30">
+  
 </head>
 
     <style> 
-        input[type=text] {
-        width: 50%;
+        input[type=text], select {
+        width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
         box-sizing: border-box;
+        }
+
+        input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: #45a049;
+        }
+
+        div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
         }
     </style>
 
@@ -24,29 +49,33 @@
 
     <body>
     
-    <h3>covid 19 cases</h3>
+    <h3 aria-label="Header">covid 19 cases</h3>
     
-    <form>
-      <label for="population">population</label>
-      <input type="text" data-population="data-population"  name="population">
-      <label for="timeToElapse">timeToElapse</label>
-      <input type="text" data-timeToElapse="data-time-to-elapse" id="timeToElapse" name="timeToElapse">
+    <div>
+        <form>
+        <label for="populations">population</label>
+        <input type="text" data-population="data-population" id="populations" name="population">
 
-      <label for="reportedCases">reportedCases</label>
-      <input type="text" data-data-reported-cases="data-reported-cases" id="reportedCases" name="reportedCases">
+        <label for="timeToElapses">timeToElapse</label>
+        <input type="text" data-timeToElapse="data-time-to-elapse" id="timeToElapses" name="timeToElapse">
 
-      <label for="totalHospitalBeds">totalHospitalBeds</label>
-      <input type="text" data-data-total-hospital-beds="data-total-hospital-beds" id="totalHospitalBeds" name="totalHospitalBeds">
+        <label for="reportedCasess">reportedCases</label>
+        <input type="text" data-data-reported-cases="data-reported-cases" id="reportedCasess" name="reportedCases">
 
-      <select id="periodType" data-data-period-type="data-period-type">
-        <option value="Days">Days/option>
-        <option value="Weeks">Weeks</option>
-        <option value="Months">Months</option>        
-      </select>
+        <label for="totalHospitalBedss">totalHospitalBeds</label>
+        <input type="text" data-data-total-hospital-beds="data-total-hospital-beds" id="totalHospitalBedss" name="totalHospitalBeds">
 
-      <input type="submit" data-data-go-estimate.="data-go-estimate." value="data-go-estimate">
+        <label for="periodTypes"> data periodType</label>
+            <select id="periodTypes" data-data-period-type="data-period-type">
+                <option value="Days">Days</option>
+                <option value="Weeks">Weeks</option>
+                <option value="Months">Months</option>        
+            </select>
 
-      </form>  
+        <input type="submit" aria-label="Submit" data-data-go-estimate.="data-go-estimate." value="data-go-estimate">
+
+        </form>
+    </div>  
     </body>
 
 <body>
